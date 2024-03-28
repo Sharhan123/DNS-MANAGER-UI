@@ -26,7 +26,7 @@ function DeleteRecord({data,id}) {
 
         try{
 
-            const res = await deleteDomain(Fdata)
+            const res = await deleteRecord(Fdata)
             navigate('/domain')
         }
         catch(err){
