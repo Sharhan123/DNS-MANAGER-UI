@@ -15,6 +15,7 @@ export const userRegister = async (data) => {
 
 export const userSignIn = async (data) => {
     try {
+        console.log(data);
         const response = await axiosWithAuth.post('/user/userSignin', data)
         return response
     } catch (err) {
