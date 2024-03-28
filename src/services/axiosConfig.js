@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosWithAuth = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: "https://api-m11bxfu2t-sharhan123s-projects.vercel.app",
 });
 
 axiosWithAuth.interceptors.request.use(
