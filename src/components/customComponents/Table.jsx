@@ -7,21 +7,21 @@ import DeleteDomain from '../domainComponents/deleteDomain';
 function Table() {
 const  [data,setData] = useState([])
 const navigate = useNavigate()
-  useEffect(()=>{
-    const fetchData = async () => {
-      try {
-        const response = await getDomains();
-       
-        setData(response.data.domains)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+const fetchData = async () => {
+  try {
+    const response = await getDomains();
+   
+    setData(response.data.domains)
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};  
+useEffect(()=>{
 
     fetchData();
 
 
-  },[])
+  },[ ])
 
   const handleEdit = (id,access,secret)=>{
     const data = {
@@ -94,7 +94,7 @@ const navigate = useNavigate()
       
       <td className="p-3 pr-12 text-center">
         <button className="btn-default overflow-hidden relative w-32 bg-red-700 text-white py-4 px-4 rounded-xl font-bold uppercase ">
-          <DeleteDomain data={item}/>
+          <DeleteDomain data={item} method={()=>fetch()}/>
         </button>
       </td>
     </tr>

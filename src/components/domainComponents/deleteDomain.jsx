@@ -3,8 +3,9 @@ import { addRecord, deleteRecord } from '../../services/userService';
 import { useNavigate } from 'react-router-dom';
 import { deleteDomain } from '../../services/userService';
 
-function DeleteDomain({data}) {
-    
+function DeleteDomain({data,method}) {
+    const [reloadFlag, setReloadFlag] = useState(false);
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const navigate = useNavigate();
@@ -25,8 +26,10 @@ function DeleteDomain({data}) {
         try{
 
             const res = await deleteDomain(Fdata)
+            setReloadFlag(prev => !prev); 
             closeModal()
-            navigate('/domain')
+            navigate('/')
+            
         }
         catch(err){
             console.log(err);    

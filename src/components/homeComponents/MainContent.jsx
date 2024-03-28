@@ -9,7 +9,7 @@ function MainContent() {
           Effortlessly Manage Your Domain's Destiny: Introducing our DNS Manager - Your Gateway to Seamless Domain Control and Configuration.
         </h1>
         <button class="btn-default ml-20 mt-10 overflow-hidden relative w-64 bg-stone-50 text-gray-900 py-4 px-4 rounded-xl font-bold uppercase transition-all duration-100 -- hover:shadow-md border border-stone-100 hover:bg-blue-800 hover:border-black hover:text-white before:to-stone-50 hover:-translate-y-[3px]">
-          <span class="relative kanit-semibold">Get started </span>
+         <a href='/domain'> <span class="relative kanit-semibold">Get started </span></a>
         </button>
 
       </div>
