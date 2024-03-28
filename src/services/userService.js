@@ -3,7 +3,7 @@ import axiosWithAuth from "./axiosConfig";
 export const userRegister = async (data) => {
     try {
 
-        const response = await axiosWithAuth.post('/user/userRegister', data)
+        const response = await axiosWithAuth.post('/api/user/userRegister', data)
         console.log(response);
         return response
 
@@ -16,7 +16,7 @@ export const userRegister = async (data) => {
 export const userSignIn = async (data) => {
     try {
         console.log(data);
-        const response = await axiosWithAuth.post('/user/userSignin', data)
+        const response = await axiosWithAuth.post('/api/user/userSignin', data)
         return response
     } catch (err) {
         throw err
@@ -25,7 +25,7 @@ export const userSignIn = async (data) => {
 
 export const addDomain = async (data) => {
     try {
-        const response = await axiosWithAuth.post('/user/addDomain', data)
+        const response = await axiosWithAuth.post('/api/user/addDomain', data)
         return response
     } catch (err) {
         throw err
@@ -33,7 +33,7 @@ export const addDomain = async (data) => {
 }
 export const getDomains = async (data)=>{
     try{
-        const response = await axiosWithAuth.get('/user/getDomains')
+        const response = await axiosWithAuth.get('/api/user/getDomains')
         return response
     }catch(err){
         console.log(err);
@@ -42,7 +42,7 @@ export const getDomains = async (data)=>{
 
 export const getDNS = async (data)=>{
     try{
-        const response = await axiosWithAuth.post('/user/getDns',data)
+        const response = await axiosWithAuth.post('/api/user/getDns',data)
         return response
     }catch(err){
         console.log(err)
@@ -51,7 +51,7 @@ export const getDNS = async (data)=>{
 
 export const addRecord = async (data)=>{
     try{
-        const response = await axiosWithAuth.post('/user/addRecords',data)
+        const response = await axiosWithAuth.post('/api/user/addRecords',data)
         return response
     }catch(err){
         throw err
@@ -60,7 +60,7 @@ export const addRecord = async (data)=>{
 
 export const editRecord = async (data)=>{
     try{
-        const response = await axiosWithAuth.post('/user/editRecords',data)
+        const response = await axiosWithAuth.post('/api/user/editRecords',data)
         return response
     }catch(err){
         throw err
@@ -69,7 +69,7 @@ export const editRecord = async (data)=>{
 
 export const deleteRecord = async(data)=>{
     try{
-        const response = await axiosWithAuth.post('/user/deleteRecord',data)
+        const response = await axiosWithAuth.post('/api/user/deleteRecord',data)
         return response
     }catch(err){
         throw err
@@ -78,7 +78,7 @@ export const deleteRecord = async(data)=>{
 
 export const deleteDomain = async(data)=>{
     try{
-        const response = await axiosWithAuth.post('/user/deleteDomain',data)
+        const response = await axiosWithAuth.post('/api/user/deleteDomain',data)
         return response
     }catch(err){
         throw err
