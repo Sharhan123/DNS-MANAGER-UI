@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosWithAuth = axios.create({
-  baseURL: "https://api-dns-record.vercel.app/",
+  baseURL: "https://api-dns.onrender.com",
 });
 
 axiosWithAuth.interceptors.request.use(
