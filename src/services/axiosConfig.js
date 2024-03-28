@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosWithAuth = axios.create({
-  baseURL: "https://dns-manager-api-kw7o-git-main-sharhan123s-projects.vercel.app",
+  baseURL: "https://api-dns-1526-9pql93tzf-sharhan123s-projects.vercel.app",
 });
 
 axiosWithAuth.interceptors.request.use(
